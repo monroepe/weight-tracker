@@ -15,13 +15,11 @@ Template.weighinForm.events({
 
     // create the new poll
     WeighIns.insert(newWeighIn);
-  },
-
-  'change #timeOfDay-select': function (event, template) {
-    var timeOfDay = $(event.currentTarget).val();
-    console.log("timeOfDay : " + timeOfDay);
   }
+});
 
+Template.weighinForm.onRendered(function() {
+    this.$('.datetimepicker').datetimepicker();
 });
 
 Template.weighinForm.helpers({
