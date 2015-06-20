@@ -9,7 +9,6 @@ Template.weighinForm.events({
     // get the data we need from the form
     var newWeighIn = {
       date: event.target.date.value,
-      timeOfDay: event.target.timeOfDay.value,
       weight: event.target.weight.value
     };
 
@@ -20,10 +19,4 @@ Template.weighinForm.events({
 
 Template.weighinForm.onRendered(function() {
     this.$('.datetimepicker').datetimepicker();
-});
-
-Template.weighinForm.helpers({
-  timeOfDay: function(){
-    return ["Morning", "Afternoon", "Evening", "Night"]
-  }
 });
