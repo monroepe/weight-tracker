@@ -1,14 +1,19 @@
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        {{ >weighinForm }}
+  {{> loginButtons}}
+  {{#if currentUser}}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          {{ >weighinForm }}
+        </div>
       </div>
     </div>
-  </div>
-  <div class="weigh-ins">
-      {{ #each weighins }}
-          {{ >weighin }}
-      {{ /each }}
-  </div>
+    <div class="weigh-ins">
+        {{ #each weighins }}
+            {{ >weighin }}
+        {{ /each }}
+    </div>
+  {{else}}
+    <h2>Please Login or Signup</h2>
+  {{/if}}
 </body>

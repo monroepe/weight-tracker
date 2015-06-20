@@ -9,3 +9,5 @@ autopublish
 insecure
 twbs:bootstrap
 tsega:bootstrap3-datetimepicker
+accounts-password
+accounts-ui

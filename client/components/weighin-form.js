@@ -9,7 +9,9 @@ Template.weighinForm.events({
     // get the data we need from the form
     var newWeighIn = {
       date: event.target.date.value,
-      weight: event.target.weight.value
+      weight: event.target.weight.value,
+      owner: Meteor.userId(),           // _id of logged in user
+      email: Meteor.user().email
     };
 
     // create the new poll
