@@ -9,12 +9,23 @@ Template.weighinForm.events({
     // get the data we need from the form
     var newWeighIn = {
       date: event.target.date.value,
-      time: event.target.time.value,
+      timeOfDay: event.target.timeOfDay.value,
       weight: event.target.weight.value
     };
 
     // create the new poll
     WeighIns.insert(newWeighIn);
+  },
+
+  'change #timeOfDay-select': function (event, template) {
+    var timeOfDay = $(event.currentTarget).val();
+    console.log("timeOfDay : " + timeOfDay);
   }
 
+});
+
+Template.weighinForm.helpers({
+  timeOfDay: function(){
+    return ["Morning", "Afternoon", "Evening", "Night"]
+  }
 });
