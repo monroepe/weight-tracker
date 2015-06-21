@@ -16,6 +16,8 @@ Template.weighinForm.events({
 
     // create the new poll
     WeighIns.insert(newWeighIn);
+
+    $('.form-control').val('');
   }
 });
 
