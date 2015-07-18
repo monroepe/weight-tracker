@@ -14,7 +14,6 @@ Template.weighinForm.events({
       email: Meteor.user().email
     };
 
-    // create the new poll
     WeighIns.insert(newWeighIn);
 
     $('.form-control').val('');
