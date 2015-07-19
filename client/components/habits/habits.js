@@ -3,3 +3,6 @@ Template.habits.helpers({
     return Habits.find({owner: Meteor.userId()});
   }
 });
+
+Template.habits.events({
+});

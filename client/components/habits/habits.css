@@ -1,4 +1,7 @@
-input[type="checkbox"]{
-  width: 15px;
-  height: 15px;
+.incomplete {
+  color: red;
+}
+
+.complete {
+  color: green;
 }
