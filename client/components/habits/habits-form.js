@@ -7,14 +7,13 @@ Template.habitForm.helpers({
 Template.habitForm.events({
     'change #frequency-select': function (event, template) {
         var frequency = $(event.currentTarget).val();
-        console.log("frequency : " + frequency);
     },
 
     'submit form': function(event) {
 
     // stop the form from submitting
     event.preventDefault();
-    console.log(event.target);
+
     // get the data we need from the form
     var newHabit = {
       title: event.target.title.value,

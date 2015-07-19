@@ -9,7 +9,9 @@
       </div>
     </div>
   </div>
-  <!-- <div class="habit well well-lg" data-id="{{ _id }}">
-    <h3>{{ name }}</h3>
-  </div> -->
+  <div class="habits">
+    {{ #each habits }}
+        {{ >habit }}
+    {{ /each }}
+  </div>
 </template>
