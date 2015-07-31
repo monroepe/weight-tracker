@@ -20,7 +20,7 @@ Template.habits.events({
   }
 });
 
-Template.habits.created = function() {
+Template.habits.rendered = function() {
   var today = new Date().setHours(0,0,0,0);
   var instances = HabitInstances.find({owner: Meteor.userId()}, {date: today}).fetch();
   if (instances == '') {

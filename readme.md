@@ -1,3 +1,3 @@
-#Habitual
+#Weight Tracker
 
-A habit forming app written in MeteorJS
+A weight tracking app in MeteorJS
